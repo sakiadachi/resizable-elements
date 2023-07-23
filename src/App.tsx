@@ -1,24 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import ButtonAppBar from "./components/ButtonAppBar";
+import { Box } from "@mui/material";
+import LeftMenu from "./components/LeftMenu";
+import BoxCenter from "./components/BoxCenter";
+import BoxRight from "./components/BoxRight";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          height: "100vh",
+          overflow: "auto",
+        }}
+      >
+        <ButtonAppBar />
+        <Box
+          sx={{
+            display: "flex",
+            flexGrow: 1,
+          }}
         >
-          Learn React
-        </a>
-      </header>
+          <LeftMenu />
+          <BoxCenter />
+          <BoxRight />
+        </Box>
+      </Box>
     </div>
   );
 }
