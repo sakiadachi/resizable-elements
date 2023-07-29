@@ -5,7 +5,7 @@ import { List, ListItem, ListItemText } from "@mui/material";
 import React from "react";
 
 export default function BoxRight() {
-  const [menuWidth, setMenuWidth] = useState(150);
+  const [menuWidth, setMenuWidth] = useState(300);
   const onMousedown = () => {
     const startDragging = (ev: MouseEvent) => {
       setMenuWidth(window.innerWidth - ev.clientX);

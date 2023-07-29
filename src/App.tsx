@@ -2,7 +2,7 @@ import "./App.css";
 import ButtonAppBar from "./components/ButtonAppBar";
 import { Box } from "@mui/material";
 import LeftMenu from "./components/LeftMenu";
-import BoxCenter from "./components/BoxCenter";
+import BoxCenter from "./components/BoxCenter/BoxCenter";
 import BoxRight from "./components/BoxRight";
 
 function App() {

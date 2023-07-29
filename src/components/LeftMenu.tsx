@@ -9,7 +9,7 @@ import { useState } from "react";
 import ResizeBar from "./ResizeBar";
 
 export default function LeftMenu() {
-  const [menuWidth, setMenuWidth] = useState(150);
+  const [menuWidth, setMenuWidth] = useState(300);
   const onMousedown = () => {
     const startDragging = (ev: MouseEvent) => {
       setMenuWidth(ev.clientX);
@@ -27,9 +27,7 @@ export default function LeftMenu() {
       sx={{
         width: menuWidth,
         height: "100%",
-        bgcolor: "background.paper",
       }}
-      component="nav"
       aria-labelledby="nested-list-subheader"
     >
       <ListItemButton>

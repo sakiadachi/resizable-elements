@@ -2,6 +2,7 @@ import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
+import BoxCenterBottom from "./BoxCenterBottom";
 
 export default function BoxCenter() {
   const Item = styled(Paper)(({ theme }) => ({
@@ -12,27 +13,30 @@ export default function BoxCenter() {
     color: theme.palette.text.secondary,
   }));
   return (
-    <Box sx={{ flexGrow: 1, padding: 2 }}>
-      <Grid container spacing={2} columns={16}>
+    <Box sx={{ flexGrow: 1, position: "relative" }}>
+      <Grid container spacing={2} columns={16} padding={1}>
         <Grid item xs={8}>
-          <Item>xs=8</Item>
+          <Item>box</Item>
         </Grid>
         <Grid item xs={8}>
-          <Item>xs=8</Item>
+          <Item>box</Item>
         </Grid>
         <Grid item xs={8}>
-          <Item>xs=8</Item>
+          <Item>box</Item>
         </Grid>
         <Grid item xs={8}>
-          <Item>xs=8</Item>
+          <Item>box</Item>
         </Grid>
         <Grid item xs={8}>
-          <Item>xs=8</Item>
+          <Item>box</Item>
         </Grid>
         <Grid item xs={8}>
-          <Item>xs=8</Item>
+          <Item>box</Item>
         </Grid>
       </Grid>
+      <Box sx={{ padding: 2 }} className="absolute bottom-0 w-full">
+        <BoxCenterBottom />
+      </Box>
     </Box>
   );
 }
